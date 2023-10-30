@@ -1,0 +1,23 @@
+name: CI-CD - XM Cloud
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  build-dotnet:
+    uses: ./.github/workflows/build_DotNet.yml
+    with:
+      buildConfiguration: Release
+
+  deploy:
+    uses: ./.github/workflows/deploy_xmCloud.yml
+    if: github.repository_owner == 'jst-cyr' && ((github.event.pull_request.head.repo.full_name == github.repository) || (github.event_name == 'push'))
+    needs: build-dotnet
+    with:
+      environmentName: Unicorn
+    secrets:
+      XM_CLOUD_CLIENT_ID: ${{ secrets.XM_CLOUD_CLIENT_ID }}
+      XM_CLOUD_CLIENT_SECRET: ${{ secrets.XM_CLOUD_CLIENT_SECRET }}
+      XM_CLOUD_ENVIRONMENT_ID: ${{ secrets.UNICORN_XM_CLOUD_ENVIRONMENT_ID }}
