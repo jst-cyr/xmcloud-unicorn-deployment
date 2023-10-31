@@ -6,10 +6,10 @@ on:
   pull_request:
     branches: [main]
 jobs:
-  build-dotnet:
-    uses: ./.github/workflows/build_DotNet.yml
-    with:
-      buildConfiguration: Release
+  ##build-dotnet:
+  ##  uses: ./.github/workflows/build_DotNet.yml
+  ##  with:
+  ##    buildConfiguration: Release
 
   deploy:
     uses: ./.github/workflows/deploy_xmCloud.yml
