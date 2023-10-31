@@ -65,7 +65,7 @@
     <PackageReference Include="Sitecore.Assemblies.SitecoreHeadlessServicesServer" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\items\master\items.unicorn.dat">
+    <Content Include="App_Data\items\master\items.master.unicorn.dat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Platform.wpp.targets" />
