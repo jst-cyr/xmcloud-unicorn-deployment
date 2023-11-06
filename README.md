@@ -18,7 +18,7 @@ This repo is to show how you can update the basic foundation head to deploy thro
 
 **The result:** It works. (With hacky things) Not supported by Sitecore, could stop working at any time. You shouldn’t do it.
 
-## QUICK START for the Starter Kit
+## QUICK START for the XM Cloud Starter Kit (without using Unicorn serialization or GitHub Actions)
 
 1. In an ADMIN terminal:
 
@@ -32,8 +32,8 @@ This repo is to show how you can update the basic foundation head to deploy thro
    .\up.ps1
    ```
 
-3. Follow the instructions to [deploy to XM Cloud](#deploy-to-xmcloud)
+3. Follow the instructions to [deploy to XM Cloud](https://doc.sitecore.com/xmc/en/developers/xm-cloud/deploy-customizations-to-the-xm-cloud-environment.html)
 
-4. Create Edge token and [query from edge](#query-edge)
+4. [Create Edge token](https://doc.sitecore.com/xmc/en/developers/xm-cloud/generate-an-edge-token.html) and [query from edge](https://doc.sitecore.com/xmc/en/developers/xm-cloud/query-examples.html)
 
 ---
